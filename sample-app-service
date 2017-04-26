@@ -1,0 +1,22 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: sampleapp-service
+  namespace: sampleapps
+spec:
+  ports:
+    - protocol: TCP
+      port: 8585
+      targetPort: 8585
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: sampleapp-service
+  namespace: sampleapps
+spec:
+  ports:
+  - protocol: TCP
+    port: 8080
+selector:
+  app: sampleapp
