@@ -30,5 +30,5 @@ spec:
   ports:
   - protocol: TCP
     port: 8080
-selector:
-  app: sampleapp
+  selector:
+    app: sampleapp
