@@ -1,0 +1,39 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: sqlclient
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: sqlclient
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sqlclient
+    spec:
+      containers:
+      - name: sqlclient
+        image: phpmyadmin/phpmyadmin:4.7
+        imagePullPolicy: Always
+        env:
+          - name: PMA_HOST
+            value: cde-nightly-continuousdelivery-io.cluster-cfmyojsjf0pw.eu-west-1.rds.amazonaws.com
+          - name: PMA_PORT
+            value: 3306
+        ports:
+        - containerPort: 80
+          protocol: TCP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: sqlclient-service
+  namespace: default
+spec:
+  ports:
+  - protocol: TCP
+    port: 8080
+  selector:
+    app: sqlclient
