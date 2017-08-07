@@ -51,7 +51,7 @@ spec:
         - containerPort: 9092
         env:
         - name: KAFKA_ADVERTISED_HOST_NAME
-          value: [cde-6-5-kafka.cde-server-nightly]
+          value: ["cde-6-5-kafka.cde-server-nightly"]
         - name: KAFKA_ZOOKEEPER_CONNECT
           value: cde-6-5-zookeeper:2181
       - name: zookeeper
