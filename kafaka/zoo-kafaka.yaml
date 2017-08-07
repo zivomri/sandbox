@@ -30,7 +30,7 @@ spec:
   selector:
     app: kafka
 ---
-apiVersion: v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: kafka
