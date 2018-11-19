@@ -1,0 +1,11 @@
+{
+	"objects": [{
+		"version": "1",
+		"applicationVersions": ["Local|robotApp1"],
+		"ownerParties": ["superuser@ca.com"],
+		"name": "test_release_dsl_1",
+		"kind": "Release"
+	}
+	]
+
+}
