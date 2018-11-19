@@ -5,7 +5,6 @@
 		"ownerParties": ["superuser@ca.com"],
 		"name": "test_release_dsl_1",
 		"kind": "Release"
-	}
-	]
+	}]
 
 }
