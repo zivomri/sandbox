@@ -1,0 +1,29 @@
+{
+	"objects": [{
+		"application": "dsl-appa-15",
+		"name": "1",
+		"kind": "ApplicationVersion"
+	},
+	{
+		"name": "Relase-of-${animal}-${age}-year-old",
+		"version": "age-${age}",
+		"kind": "Release",
+		"applicationVersions": ["dsl-appa-15"]
+	},
+	{
+		"approvalGate": "MANUAL",
+		"release": "Relase-of-${animal}-${age}-year-old/age-${age}",
+		"isApprovalRequired": false,
+		"description": "Release Manager tests",
+		"name": "Manual_Phase_${animal}",
+		"kind": "Phase"
+	}],
+	"parameters": [{
+		"name": "animal",
+		"value": "pelican"
+	},
+	{
+		"name": "age",
+		"value": "10"
+	}]
+}
