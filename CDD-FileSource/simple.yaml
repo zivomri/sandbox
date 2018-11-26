@@ -1,0 +1,18 @@
+{
+	"objects": [{
+		"version": "1",
+		"applicationVersions": ["Local|Golbal Application 4qjIdT5gUG"],
+		"ownerParties": ["superuser@ca.com"],
+		"runOnCreation": false,
+		"name": "REL222",
+		"kind": "Release"
+	},
+	{
+		"release": "REL222/1",
+		"approvalGate": "MANUAL",
+		"skipTasksWithUnchangedApplications": false,
+		"isApprovalRequired": false,
+		"name": "P1",
+		"kind": "Phase"
+	}]
+}
